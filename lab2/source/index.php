@@ -28,5 +28,9 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
     <button id="audioCancel" onclick="cancelAudio()">Anuluj odtwarzanie dźwięku</button><br/><br/>
 <?php endif; ?>
 
+<?php if ($imgFile): ?>
+    <img id="posterImage" src="<?php echo htmlspecialchars($imgFile); ?>" alt="Obraz">
+<?php endif; ?>
+
 </body>
 </html>
