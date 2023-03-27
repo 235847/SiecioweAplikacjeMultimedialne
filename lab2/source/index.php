@@ -39,6 +39,11 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
             document.getElementById("videoPlayerSource").src = "cancel.mp4";
         }
 
+        function cancelAudio() {
+            document.getElementById("audioPlayer").src = "cancel.mp3";
+            document.getElementById("audioPlayerSource").src = "cancel.mp4";
+        }
+
 </script>
 
 </body>
