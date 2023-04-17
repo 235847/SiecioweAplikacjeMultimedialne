@@ -32,6 +32,14 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
     <img id="posterImage" src="<?php echo htmlspecialchars($imgFile); ?>" alt="Obraz">
 <?php endif; ?>
 
+<table id="playlist_table">
+    <tr>
+        <th>No.</th>
+        <th>URL</th>
+        <th>Type</th>
+    </tr>
+</table>
+
 <script>
 
         function cancelVideo() {
