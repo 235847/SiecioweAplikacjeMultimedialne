@@ -89,4 +89,14 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         cell3.innerHTML = mediaType;
         cell4.innerHTML = `<button class="removeRowButton" onclick="deleteRow(this)">Delete</button>`;
     }
+
+    function deleteRow(button) {
+        const row = button.parentNode.parentNode;
+        const table = row.parentNode;
+        table.removeChild(row);
+
+        for (let i = 1; i < table.rows.length; i++) {
+            table.rows[i].cells[0].innerHTML = i;
+        }
+    }
 </script>
