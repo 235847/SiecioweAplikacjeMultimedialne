@@ -41,6 +41,7 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         <th>No.</th>
         <th>URL</th>
         <th>Type</th>
+        <th>Action</th>
     </tr>
 </table>
 
@@ -68,13 +69,11 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         const cell1 = newRow.insertCell(0);
         const cell2 = newRow.insertCell(1);
         const cell3 = newRow.insertCell(2);
+        const cell4 = newRow.insertCell(3);
 
         cell1.innerHTML = table.rows.length - 1;
         cell2.innerHTML = src;
         cell3.innerHTML = mediaType;
-    }       
-
+        cell4.innerHTML = `<button class="removeRowButton" onclick="deleteRow(this)">Delete</button>`;
+    }
 </script>
-
-</body>
-</html>
