@@ -11,6 +11,19 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World Player</title>
+    <style>
+        .removeRowButton {
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 14px;
+            margin: 4px 2px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
