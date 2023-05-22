@@ -109,4 +109,11 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
             table.rows[i].cells[0].innerHTML = i;
         }
     }
+
+    function updateRowNumbers() {
+        const table = document.getElementById('playlist_table');
+        for (let i = 1; i < table.rows.length; i++) {
+            table.rows[i].cells[0].innerHTML = i;
+        }
+    }
 </script>
