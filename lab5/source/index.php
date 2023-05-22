@@ -110,6 +110,19 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         }
     }
 
+    function moveRowUp(button) {
+        let row = button.parentNode.parentNode;
+        let prevRow = row.previousElementSibling;
+
+        if (prevRow && prevRow.cells[0].innerHTML != "No.") {
+            row.parentNode.insertBefore(row, prevRow);
+        } else {
+            row.parentNode.insertBefore(row, null);
+        }
+
+        updateRowNumbers();
+    } 
+
     function updateRowNumbers() {
         const table = document.getElementById('playlist_table');
         for (let i = 1; i < table.rows.length; i++) {
