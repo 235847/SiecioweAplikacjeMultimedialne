@@ -95,7 +95,9 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         cell1.innerHTML = table.rows.length - 1;
         cell2.innerHTML = src;
         cell3.innerHTML = mediaType;
-        cell4.innerHTML = `<button class="removeRowButton" onclick="deleteRow(this)">Delete</button>`;
+        cell4.innerHTML = `<button class="removeRowButton" onclick="deleteRow(this)">Delete</button>
+                            <button class="moveRowUpButton" onclick="moveRowUp(this)">Up</button>
+                            <button class="moveRowDownButton" onclick="moveRowDown(this)">Down</button>`;
     }
 
     function deleteRow(button) {
