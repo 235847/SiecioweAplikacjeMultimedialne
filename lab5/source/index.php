@@ -123,6 +123,18 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         updateRowNumbers();
     } 
 
+
+    function moveRowDown(button) {
+        let row = button.parentNode.parentNode;
+        let nextRow = row.nextElementSibling;
+        if (nextRow) {
+            row.parentNode.insertBefore(nextRow, row);
+        } else {
+            row.parentNode.insertBefore(row, row.parentNode.rows[1]);
+        }
+        updateRowNumbers();
+    }
+
     function updateRowNumbers() {
         const table = document.getElementById('playlist_table');
         for (let i = 1; i < table.rows.length; i++) {
