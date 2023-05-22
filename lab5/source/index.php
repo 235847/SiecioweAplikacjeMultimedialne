@@ -12,7 +12,7 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World Player</title>
     <style>
-        .removeRowButton {
+        .removeRowButton, .moveRowUpButton, .moveRowDownButton {
             cursor: pointer;
             background-color: red;
             color: white;
@@ -22,6 +22,14 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
             font-size: 14px;
             margin: 4px 2px;
             border-radius: 5px;
+        }
+
+        .moveRowUpButton {
+            background-color: green;
+        }
+
+        .moveRowDownButton {
+            background-color: blue;
         }
     </style>
 </head>
