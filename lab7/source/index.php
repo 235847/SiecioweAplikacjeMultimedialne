@@ -157,4 +157,7 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         document.getElementById("audioPlayer").play();
     }
 
+    function pauseAudio() {
+        document.getElementById("audioPlayer").pause();
+    }
 </script>
