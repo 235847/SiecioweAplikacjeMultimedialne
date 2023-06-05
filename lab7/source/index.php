@@ -149,5 +149,8 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         document.getElementById("videoPlayer").play();
     }
 
- 
+    function pauseVideo() {
+        document.getElementById("videoPlayer").pause();
+    }
+
 </script>
