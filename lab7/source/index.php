@@ -40,7 +40,9 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         <source id="videoPlayerSource" src="<?php echo htmlspecialchars($videoFile); ?>" type="video/mp4">
     </video><br/><br/>
     <button id="videoCancel" onclick="cancelVideo()">Anuluj odtwarzanie wideo</button>
-    <button id="videoAdd" onclick="addMedia('videoPlayer', 'Video')">Dodaj video</button><br/><br/>
+    <button id="videoAdd" onclick="addMedia('videoPlayer', 'Video')">Dodaj video</button>
+    <button id="videoPlay" onclick="playVideo()">Play Video</button>
+    <button id="videoPause" onclick="pauseVideo()">Pause Video</button><br/><br/>
 <?php endif; ?>
 
 <?php if ($audioFile): ?>
@@ -48,7 +50,9 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
         <source id="audioPlayerSource" src="<?php echo htmlspecialchars($audioFile); ?>" type="audio/mpeg">
     </audio><br/><br/>
     <button id="audioCancel" onclick="cancelAudio()">Anuluj odtwarzanie dźwięku</button>
-    <button id="audioAdd" onclick="addMedia('audioPlayer', 'Audio')">Dodaj dżwięk</button><br/><br/>
+    <button id="audioAdd" onclick="addMedia('audioPlayer', 'Audio')">Dodaj dżwięk</button>
+    <button id="audioPlay" onclick="playAudio()">Play Audio</button>
+    <button id="audioPause" onclick="pauseAudio()">Pause Audio</button><br/><br/>
 <?php endif; ?>
 
 <?php if ($imgFile): ?>
@@ -111,17 +115,16 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
     }
 
     function moveRowUp(button) {
-    let row = button.parentNode.parentNode;
-    let prevRow = row.previousElementSibling;
+        let row = button.parentNode.parentNode;
+        let prevRow = row.previousElementSibling;
 
-    if (prevRow && prevRow.cells[0].innerHTML != "No.") {
-        row.parentNode.insertBefore(row, prevRow);
-    } else {
-        row.parentNode.insertBefore(row, null);
-    }
-
-    updateRowNumbers();
-} 
+        if (prevRow && prevRow.cells[0].innerHTML != "No.") {
+            row.parentNode.insertBefore(row, prevRow);
+        } else {
+            row.parentNode.insertBefore(row, null);
+        }
+        updateRowNumbers();
+    } 
 
 
     function moveRowDown(button) {
