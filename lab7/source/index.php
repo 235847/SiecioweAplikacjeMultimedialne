@@ -144,4 +144,10 @@ $imgFile = isset($_GET['imgFile']) ? $_GET['imgFile'] : null;
             table.rows[i].cells[0].innerHTML = i;
         }
     }
+
+    function playVideo() {
+        document.getElementById("videoPlayer").play();
+    }
+
+ 
 </script>
